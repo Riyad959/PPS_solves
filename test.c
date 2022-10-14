@@ -1,19 +1,20 @@
 #include<stdio.h>
+
 int main()
 {
-    int num[100] , i ,j , highest=0,position;
-    for ( i = 0; i < 100; i++)
-    {
-        scanf("%d",&num[i]);
-        if (num[i]>highest)
+    int i, j, M, N, x = 0, c;
+    for(i = 0;i < 100;i++)
         {
-            highest=num[i];
-            position=i+1;
+        scanf("%d %d", &M, &N);
+        if(M <= 0 || N <= 0)break;
+        if(M > N){c = M;M = N;N = c;}
+        for(j = M;j <= N;j++){
+            printf("%d ", j);
+            x = x + j;
         }
-        
+        printf("Sum=%d\n", x);
+        x = 0;
     }
-        printf("%d\n",highest);
-        printf("%d\n",position);
-    
-     return 0;
+
+    return 0;
 }

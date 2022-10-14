@@ -1,32 +1,28 @@
-05;
-    switch (a)
+#include<stdio.h>
+int main()
+{
+    int M,N,i,j,c,x=0;
+    for ( i = 0; i < 100; i++)
     {
-    case 1:
-        scanf("%d %d",&pn1,&q);
-        break;
-    case 2:
-        scanf("%d %d",&pn1,&q);
-        scanf("%d %d",&pn2,&q);
-        break;
-    case 3:
-        scanf("%d %d",&pn1,&q);
-        scanf("%d %d",&pn2,&q);
-        scanf("%d %d",&pn3,&q);
-        break;
-    case 4:
-        scanf("%d %d",&pn1,&q);
-        scanf("%d %d",&pn2,&q);
-        scanf("%d %d",&pn3,&q);
-        scanf("%d %d",&pn4,&q);
-        break;
-    case 5:
-        scanf("%d %d",&pn1,&q);
-        scanf("%d %d",&pn2,&q);
-        scanf("%d %d",&pn3,&q);
-        scanf("%d %d",&pn4,&q);
-        scanf("%d %d",&pn5,&q);
-        break;
-        
-    default:
-        break;
+        scanf("%d %d", &M, &N);
+        if (M<=0 || N<=0)
+        {
+            return 0;
+        }
+        if (M > N)
+        {
+            c=M;
+            M=N;
+            N=c;
+        }
+        for ( j = M; j <= N; j++)
+        {
+            printf("%d ",j);
+            x=x+j;
+        }
+        printf("Sum=%d\n", x);
+        x = 0;
     }
+    
+    return 0;
+}
