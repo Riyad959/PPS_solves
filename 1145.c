@@ -1,17 +1,22 @@
 #include<stdio.h>
 int main()
 {
-    int x,y,i,j;
-    scanf("%d %d", &x, &y);
-    i=1;
-    while (i <= y)
+    int X , Y ,i,j=0;
+    scanf("%d %d",&X ,&Y);
+    for ( i = 1; i <=Y; i++)
     {
-        for ( j = 0; j < x; j++)
+        j++;
+        if (j==X)
+        printf("%d",i);
+        else
+        printf("%d ",i);
+        
+        if (j==X)
         {
-            printf("%d ",i);
-            i++;
+            printf("\n");
+            j=0;
         }
-        printf("\n");
+        
     }
     
     return 0;
